@@ -1,0 +1,34 @@
+# sample config defaults file
+params:
+  epochs: 100
+  batch_size: 16
+  output_dir: 'wandb_classification'   
+  learning_rate: 3e-5
+  max_steps: 3000
+  warmup_steps: 300
+  weight_decay: 0.01
+  logging_steps: 150
+  eval_steps: 150
+  load_best_model_at_end: True
+  tf32: True
+  metric_for_best_model: 'macro_f1'
+  gradient_accumulation_steps: 1
+  per_device_eval_batch_size: 128
+
+paths:
+  data: '/home/shan/Desktop/r/Esophagitis/Proper_split_data/'
+  project_name: 'nick_hydra'
+
+run:
+  clean: None 
+  num_classes: 22                      
+  raytune: None
+  hf_model: "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"
+  struc: None
+  exam: None
+  ros: None
+  rot: None
+  ih: None
+  ap: None
+  sec: None
+  
